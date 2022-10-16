@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 - Multimedia</title>
+</head>
+
+<body>
+    <h2>Video - HTML 5</h2>
+    </P>
+    <button type="button" onclick="playVid()">Play Video</button>
+    <button type="button" onclick="pauseVid()">Pause Video</button>
+    <button type="button" onclick="duration()">Duration</button>
+    <button type="button" onclick="controlOn()">Control ON</button>
+    <button type="button" onclick="controlOff()">Control OFF</button>
+    </P>
+    <video id="myVideo" width="420" contorols>
+        <source src="mov_bbb.mp4" type="video/mp4">
+    </video>
+</body>
+<script>
+    var vid = document.getElementById("myVideo");
+
+    function playVid() {
+        vid.play();
+        vid.loop = true;
+    }
+
+    function duration() {
+        alert(vid.duration);
+    }
+    function pauseVid() {
+        vid.pause();
+    }
+    function controlOn() {
+
+        var vid = document.getElementById("myVideo");
+        vid.controls = true;
+
+    }
+    function controlOff() {
+
+        var vid = document.getElementById("myVideo");
+        vid.controls = false;
+
+    }
+
+</script>
+
+</html>
