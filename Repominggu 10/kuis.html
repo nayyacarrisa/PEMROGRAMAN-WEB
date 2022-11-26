@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello Jscript</title>
+        <script>
+            function hitung(){
+            var form = document.formHitung;
+            var x = eval(form.bill.value);
+            var y = eval(form.bill2.value);
+            var opr = form.opr.value;
+            
+            if (opr == "+"){
+                var z = x+y;
+            }else if (opr == "-"){
+                var z = x-y;
+            }else if (opr == "*"){
+                var z = x*y;
+            }else if (opr == "/"){
+                var z = x/y;
+            }
+            form.hasil.value = z;
+        }
+        </script>
+    </head>
+    <body>
+        <h1>Java Script</h1>
+        <form name="formHitung">
+        bil 1 <input type="number" name="bill"><br>
+        opr
+        <select name="opr1">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select><br>
+        bil 2 <input type="number" name="bill2">
+        <input type="button" value="=" onclick="hitung()">
+        <input type="number" name="hasil" disabled>
+        </form>
+    </body>
+</html>
